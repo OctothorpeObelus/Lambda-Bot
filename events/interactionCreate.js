@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'interactionCreate',
 	execute(interaction) {
-		console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered an interaction.`);
+		console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered command /${interaction.commandName}.`);
 
         if (!interaction.isChatInputCommand()) return;
 
@@ -10,10 +10,10 @@ module.exports = {
         if (!command) return;
 
         try {
-            await command.execute(interaction);
+            command.execute(interaction);
         } catch (error) {
             console.error(error);
-            await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+            interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
         }
 	},
 };
