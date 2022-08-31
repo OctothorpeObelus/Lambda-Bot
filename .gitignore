@@ -3,3 +3,6 @@
 
 # Config File
 /config.json
+
+# Linter config
+/.eslintrc.json
