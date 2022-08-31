@@ -1,8 +1,11 @@
 # Node Modules folder
 /node_modules/
 
-# Config File
+# Config file
 /config.json
+
+# Environment variable file
+/.env
 
 # Linter config
 /.eslintrc.json
