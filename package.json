@@ -15,7 +15,8 @@
   "dependencies": {
     "@discordjs/rest": "^1.1.0",
     "discord.js": "^14.3.0",
-    "dotenv": "^16.0.2"
+    "dotenv": "^16.0.2",
+    "image-search-engine": "^1.2.1"
   },
   "devDependencies": {
     "eslint": "^8.23.0"

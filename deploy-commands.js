@@ -42,3 +42,4 @@ function addCommands(cmdPath, guildId = "") {
 }
 
 addCommands('global');
+addCommands('roo_server', '953728013122560055');

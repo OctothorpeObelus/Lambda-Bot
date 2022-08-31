@@ -11,18 +11,22 @@ const { token } = require('./config.json');
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-// Load commands.
 client.commands = new Collection();
-const commandsPath = path.join(__dirname, 'commands');
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+function loadCommandSet(dir) {
+	// Load commands.
+	const commandsPath = path.join(__dirname, 'commands', dir);
+	const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
-for (const file of commandFiles) {
-	const filePath = path.join(commandsPath, file);
-	const command = require(filePath);
-	// Set a new item in the Collection
-	// With the key as the command name and the value as the exported module
-	client.commands.set(command.data.name, command);
+	for (const file of commandFiles) {
+		const filePath = path.join(commandsPath, file);
+		const command = require(filePath);
+		// Set a new item in the Collection
+		// With the key as the command name and the value as the exported module
+		client.commands.set(command.data.name, command);
+	}
 }
+loadCommandSet('global');
+loadCommandSet('roo_server');
 
 // Load events.
 const eventsPath = path.join(__dirname, 'events');
