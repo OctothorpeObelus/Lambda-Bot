@@ -1,2 +1,5 @@
 # Node Modules folder
 /node_modules/
+
+# Config File
+/config.json
