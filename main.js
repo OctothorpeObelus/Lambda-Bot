@@ -27,6 +27,7 @@ function loadCommandSet(dir) {
 }
 loadCommandSet('global');
 loadCommandSet('roo_server');
+loadCommandSet('furtards');
 
 // Load events.
 const eventsPath = path.join(__dirname, 'events');

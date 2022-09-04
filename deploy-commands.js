@@ -43,3 +43,4 @@ function addCommands(cmdPath, guildId = "") {
 
 addCommands('global');
 addCommands('roo_server', '953728013122560055');
+addCommands('furtards', '1007433879692525629');
