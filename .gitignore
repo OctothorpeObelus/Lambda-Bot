@@ -1,3 +1,6 @@
+# bot_output folder in Assets
+/assets/bot_output/*.*
+
 # Node Modules folder
 /node_modules/
 

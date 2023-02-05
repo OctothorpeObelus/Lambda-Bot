@@ -1,0 +1,13 @@
+const { SlashCommandBuilder } = require('discord.js');
+
+module.exports = {
+    // Build the new slash command.
+	data: new SlashCommandBuilder()
+		.setName('fight')
+		.setDescription('RNG fight with another user'),
+        
+    // The reaction to the command being run.
+	async execute(interaction) {
+		await interaction.reply('This command is currently under development and not yet available.');
+	},
+};
