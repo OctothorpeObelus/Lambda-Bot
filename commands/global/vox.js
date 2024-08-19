@@ -28,12 +28,12 @@ module.exports = {
 		let invalid_words = [];
 		// Check that all strings entered are valid. If not, return an ephemeral error message with a list of invalid strings.
 		string.forEach(word => {
-			if (!valid_phrases.includes(word)) {
-				invalid_words.push(word);
+			if (!valid_phrases.includes(word.toLowerCase())) {
+				invalid_words.push(word.toLowerCase());
 			}
 		});
 		for (let i = 0; i < string.length; i++) {
-			string[i] = path + string[i] + ".mp3";
+			string[i] = path + (string[i].toLowerCase()) + ".mp3";
 		}
 		console.log(string);
 
